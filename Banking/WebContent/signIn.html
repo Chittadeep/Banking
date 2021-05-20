@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign In</title>
+
+<script type="text/javascript">
+function check()
+{
+if(document.getElementById("number").value=="")
+	{
+	alert("please enter the account number");
+	return false;
+	}
+	
+if(document.getElementById("name").value=="")
+{
+alert("please enetr the account holder's name");
+return false;
+}
+
+if(document.getElementById("password").value=="")
+{
+alert("please enter account password");
+return false;
+}
+
+if(document.getElementById("phone").value=="")
+{
+alert("please enter account's phone number");
+return false;
+}
+}
+
+</script>
+<link rel="stylesheet" href="SignForms.css">
+</head>
+<body>
+
+<h1>Sign In</h1>
+
+<br>
+
+<form name="SignInForm"action="SignIn" method="post" onsubmit="return check()">
+
+<label for="number">account number</label><br>
+<input type = "number" id = number name = "number" value="3788033336440505602" required>
+<br>
+<label for="name">name</label>
+<input type = "text" id = number name = "name" value="Moloy Karmakar" required>
+<br>
+<label for="password">password</label>
+<input type = "password" id = password name = "password" value= "jfdkmiogjkf" required>
+<br>
+<label for="phone">phone</label>
+<input type = "tel" id = phone name="phone" value="4454565" required>
+<br>
+<input type = "submit" id = submit required>
+
+</form>
+
+</body>
+</html>

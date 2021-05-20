@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body{
+	padding-left: 35%;
+	padding-right: 35%;
+	text-align: center;
+}
+form{
+	background:#f2f2f2;
+	text-align:left;
+	padding:5mm;
+	border: 5px solid grey;
+	border-radius: 1cm;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"]
+{
+	width: 95%;
+	padding: 1mm;
+
+}
+
+input[type="submit"],
+input[type="file"]
+{
+	margin:2mm;
+}
+
+@media screen and (max-width: 400px) {
+	body{
+		padding-left:15%;
+		padding-right:15%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	body{
+		padding-left:25%;
+		padding-right:25%;	
+	}
+}

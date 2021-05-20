@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SignUP</title>
+
+<script type="text/javascript">
+function check()
+{
+if(document.getElementById("Firstname").value=="")
+	{
+	alert("please enter the First Name");
+	return false;
+	}
+	
+if(document.getElementById("lastName").value=="")
+{
+alert("please eneter the Last name");
+return false;
+}
+
+if(document.getElementById("password").value=="")
+{
+alert("please enter account password");
+return false;
+}
+
+if(document.getElementById("phone").value=="")
+{
+alert("please enter account's phone number");
+return false;
+}
+}
+
+</script>
+
+<link rel="stylesheet" href="SignForms.css">
+
+</head>
+<body>
+
+<h3>Sign up</h3>
+
+<br>
+
+<form name="SignUpForm" method="post" action="SignUp" onsubmit="return check()">
+
+<label for="Firstname" >First Name</label><br>
+<input type="text" id="Firstname" name="Firstname" required>
+
+<br>
+
+<label for="lastName" >Last Name</label><br>
+<input type = "text" id ="lastName" name="lastName" required>
+
+<br>
+
+<label for="password" >Password</label><br>
+<input type="password" id="password" name="password" required>
+
+<br>
+
+<label for="phone" >phone</label><br>
+<input type="tel" id ="phone" name="phone" required>
+
+<br>
+
+<label for="email">Email</label><br>
+<input type ="email" id=email name="email" required>
+
+<br>
+	<fieldset>
+	<legend>Gender</legend>
+  <input type="radio" id="gender" name="gender" value="male"> Male
+  <input type="radio" id="gender" name="gender" value="female"> Female<br>
+  <input type="radio" id="gender" name="gender" value="other"> Other
+</fieldset>
+
+<br>
+<label for="birthdate">Birthdate</label><br>
+<input type="date" id = "birthdate" name ="birthdate" required>
+<br>
+<label for="photo">photo</label><br>
+<input type="file" id ="photo" name ="photo" required>
+<br>
+<input type="submit" id="submit" value="submit">
+</form>
+
+</body>
+</html>
