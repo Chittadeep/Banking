@@ -67,6 +67,10 @@ public class Account extends HttpServlet {
 		{
 			database.applyLoan(id, amount, reason, balance);
 		}
+        if(action.equals("paybackloan"))
+		{
+			database.payback(id, toID, balance);
+		}
 	}
 
 }

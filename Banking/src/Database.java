@@ -283,4 +283,36 @@ public class Database {
 		return null;
 	}
 	
+    void payback(String id, String loanId, String balance) {
+		try {
+		String sql = "SELECT AMOUNT FROM `Loan` WHERE `ID`= ? AND `LOAN ID` = ?";
+		
+		PreparedStatement pstmt = con.prepareStatement(sql);
+		
+		pstmt.setString(1, id);
+		pstmt.setString(2, loanId);
+		
+		
+		ResultSet set = pstmt.executeQuery();
+				set.first();
+		String amount = set.getString("AMOUNT");
+		
+		sql = "DELETE FROM `Loan` WHERE `ID`= ? AND `LOAN ID`= ?";
+		
+		pstmt= con.prepareStatement(sql);
+		
+		pstmt.setString(1, id);
+		pstmt.setString(2, loanId);
+		
+		pstmt.execute();
+		
+		withdraw(id, balance, amount, "bank", loanId, "Loan Payback");
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
 }

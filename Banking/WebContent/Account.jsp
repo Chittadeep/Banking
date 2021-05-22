@@ -81,6 +81,7 @@ function show()
 <input type="text" id ="reason" name="reason" required>
 <input type = "submit" id = deposit name = "action" value = "deposit" onClick="return Deposit()">
 <input type="submit" id = loan name = "action" value ="loan"> 
+<input type="submit" id = paybackLoan name = "action" value ="paybackloan"> 
 </form>
 <br>
 
